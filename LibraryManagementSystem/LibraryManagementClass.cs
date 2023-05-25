@@ -309,7 +309,7 @@ namespace LibraryManagementSystem
                 }
 
                 // Return book
-                string returnQuery = "UPDATE IssueBook SET Return_Date = @ReturnDate WHERE Book_Id = @BookId AND Roll_No = @rollnum And AND Return_Date IS NULL";
+                string returnQuery = "UPDATE IssueBook SET Return_Date = @ReturnDate WHERE Book_Id = @BookId AND Roll_No = @rollnum And Return_Date IS NULL";
                 using (SqlCommand returnCommand = new SqlCommand(returnQuery, con))
                 {
                     returnCommand.Parameters.AddWithValue("@ReturnDate", DateTime.Today);
